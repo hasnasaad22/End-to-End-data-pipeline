@@ -3,9 +3,10 @@ weather_dbt:
   outputs:
     dev:
       type: postgres
-      host: db
+      host: postgres_container
       user: airflow
       password: airflow
-      dbname: airflow_db
-      schema: public
       port: 5432
+      dbname: airflow_db
+      schema: bronze
+      threads: 4

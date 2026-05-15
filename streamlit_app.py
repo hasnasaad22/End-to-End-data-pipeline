@@ -10,7 +10,7 @@ st.set_page_config(page_title="Weather Dashboard", layout="wide")
 # -------------------------
 conn = psycopg2.connect(
     host="localhost",
-    database="airflow_db",
+    database="dwh",
     user="airflow",
     password="airflow"
 )

@@ -12,4 +12,10 @@ RUN pip install --no-cache-dir \
 # إضافة مسار dbt إلى الـ PATH
 ENV PATH="${PATH}:/home/airflow/.local/bin"
 
+USER root
+
+RUN apt-get update && apt-get install -y git
+
+USER airflow
+
 
