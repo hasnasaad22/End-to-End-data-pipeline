@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS bronze.weather_raw (
 
 conn.commit()
 
-print("Consumer started... 🚀")
+print("Consumer started")
 
 for message in consumer:
 
