@@ -20,6 +20,8 @@ The workflow is orchestrated using Apache Airflow and fully containerized with D
 
 # 🏗️ Project Architecture
 
+This architecture follows a Medallion pattern to ensure data quality, scalability, and clear separation between raw, cleaned, and aggregated data layers.
+
 ```text
 Weather API
     ↓
@@ -68,10 +70,10 @@ dbt is used to transform raw weather data using a Medallion Architecture approac
 
 ```json
 {
-  "temperature": "float",
-  "humidity": "float",
-  "timestamp": "datetime",
-  "city": "string"
+  "source": "string",
+  "temperature": "float | null",
+  "humidity": "float | null",
+  "ingestion_time": "datetime"
 }
 ```
 
@@ -94,8 +96,9 @@ dbt tests are used to validate data integrity.
 
 Implemented tests:
 
-* `not_null(temperature)`
-* `not_null(humidity)`
+* temperature should not be null for CSV source
+* humidity should not be null for CSV source
+* ingestion_time must always be not null
 
 ---
 
@@ -202,9 +205,15 @@ The pipeline was validated by querying PostgreSQL tables directly.
 
 Example:
 
-```sql
-select count(*) from bronze.weather_raw;
+```
+-- Validate data distribution by source
+select source, count(*) 
+from bronze.weather_raw
+group by source;
 
-select * from bronze.weather_metrics_final limit 5;
+-- Check final aggregated output
+select * 
+from gold.weather_metrics_final
+limit 5;
 
 ```
