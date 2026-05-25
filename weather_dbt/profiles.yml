@@ -3,7 +3,7 @@ weather_dbt:
   outputs:
     dev:
       type: postgres
-      host: db
+      host: localhost
       user: airflow
       password: airflow
       dbname: airflow_db

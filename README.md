@@ -38,7 +38,7 @@ dbt Transformations
     ↓
 Analytics / Dashboards
 ```
-![Architecture Diagram](architecture.png)
+![Architecture Diagram](medallion_dual_source_architecture.png)
 ---
 
 # 📦 Kafka Infrastructure

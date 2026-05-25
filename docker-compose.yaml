@@ -46,7 +46,7 @@ services:
     networks:
       - my-network
 
-
+  
   airflow-init:
     build: .
     container_name: airflow_init

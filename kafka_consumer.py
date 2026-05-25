@@ -1,8 +1,7 @@
 from kafka import KafkaConsumer
 import json
 import psycopg2
-import pandas as pd
-
+from psycopg2.extras import Json
 
 consumer = KafkaConsumer(
     'weather-events',
@@ -22,10 +21,8 @@ conn = psycopg2.connect(
 
 cursor = conn.cursor()
 
-# Create schema
 cursor.execute("CREATE SCHEMA IF NOT EXISTS bronze;")
 
-# Create table
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS bronze.weather_raw (
     id SERIAL PRIMARY KEY,
@@ -42,19 +39,20 @@ for message in consumer:
 
     data = message.value
 
-    # safe NaN handling
-    for key, value in data.items():
-        if pd.isna(value):
-            data[key] = None
+    clean_data = {
+        k: (None if v != v else v)
+        for k, v in data.items()
+    }
 
     try:
         cursor.execute("""
             INSERT INTO bronze.weather_raw (raw_json)
             VALUES (%s)
-        """, (json.dumps(data),))
+        """, (Json(clean_data),))
 
         conn.commit()
-        print("Inserted ✔️ ->", data)
+
+        print(f"Inserted from {clean_data.get('source')} ✔️ ->", clean_data)
 
     except Exception as e:
         print("DB Error:", e)

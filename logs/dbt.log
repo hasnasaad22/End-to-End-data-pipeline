@@ -81,3 +81,157 @@ Runtime Error
 [0m13:41:15.347687 [debug] [MainThread]: Command `dbt run` failed at 13:41:15.347529 after 0.22 seconds
 [0m13:41:15.348117 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C048FEC640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C048F2A570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C048F84F30>]}
 [0m13:41:15.349073 [debug] [MainThread]: Flushing usage events
+[0m08:18:10.066282 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E23E8EDE80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E23E7C91D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E241288190>]}
+
+
+============================== 08:18:10.073565 | 2cdee823-1510-43cb-a0a2-bf3de5ac5643 ==============================
+[0m08:18:10.073565 [info ] [MainThread]: Running with dbt=1.6.0
+[0m08:18:10.074206 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'debug': 'False', 'log_path': 'logs', 'invocation_command': 'dbt debug', 'log_cache_events': 'False', 'write_json': 'True', 'printer_width': '80', 'version_check': 'True', 'target_path': 'None', 'static_parser': 'True', 'warn_error': 'None', 'quiet': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'partial_parse': 'True', 'profiles_dir': 'C:\\Users\\ascom\\Desktop\\data engineering\\weather project', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'fail_fast': 'False', 'no_print': 'None'}
+[0m08:18:10.074743 [info ] [MainThread]: dbt version: 1.6.0
+[0m08:18:10.075238 [info ] [MainThread]: python version: 3.13.5
+[0m08:18:10.075696 [info ] [MainThread]: python path: C:\Users\ascom\AppData\Local\Programs\Python\Python313\python.exe
+[0m08:18:10.076157 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m08:18:10.156606 [info ] [MainThread]: Using profiles dir at C:\Users\ascom\Desktop\data engineering\weather project
+[0m08:18:10.157271 [info ] [MainThread]: Using profiles.yml file at C:\Users\ascom\Desktop\data engineering\weather project\profiles.yml
+[0m08:18:10.157772 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\ascom\Desktop\data engineering\weather project\dbt_project.yml
+[0m08:18:10.158773 [info ] [MainThread]: adapter type: postgres
+[0m08:18:10.159291 [info ] [MainThread]: adapter version: 1.6.0
+[0m08:18:10.159815 [info ] [MainThread]: Configuration:
+[0m08:18:10.160254 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m08:18:10.160685 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m08:18:10.161128 [info ] [MainThread]: Required dependencies:
+[0m08:18:10.161604 [debug] [MainThread]: Executing "git --help"
+[0m08:18:10.250619 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m08:18:10.251204 [debug] [MainThread]: STDERR: "b''"
+[0m08:18:10.251848 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m08:18:10.252438 [info ] [MainThread]: Connection:
+[0m08:18:10.253037 [info ] [MainThread]:   host: postgres_container
+[0m08:18:10.253568 [info ] [MainThread]:   port: 5432
+[0m08:18:10.253969 [info ] [MainThread]:   user: airflow
+[0m08:18:10.254383 [info ] [MainThread]:   database: airflow_db
+[0m08:18:10.254803 [info ] [MainThread]:   schema: bronze
+[0m08:18:10.255246 [info ] [MainThread]:   connect_timeout: 10
+[0m08:18:10.255637 [info ] [MainThread]:   role: None
+[0m08:18:10.256019 [info ] [MainThread]:   search_path: None
+[0m08:18:10.256398 [info ] [MainThread]:   keepalives_idle: 0
+[0m08:18:10.256822 [info ] [MainThread]:   sslmode: None
+[0m08:18:10.257212 [info ] [MainThread]:   sslcert: None
+[0m08:18:10.257853 [info ] [MainThread]:   sslkey: None
+[0m08:18:10.258378 [info ] [MainThread]:   sslrootcert: None
+[0m08:18:10.258936 [info ] [MainThread]:   application_name: dbt
+[0m08:18:10.259462 [info ] [MainThread]:   retries: 1
+[0m08:18:10.260368 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m08:18:10.261214 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m08:18:10.261666 [debug] [MainThread]: Using postgres connection "debug"
+[0m08:18:10.262092 [debug] [MainThread]: On debug: select 1 as id
+[0m08:18:10.262483 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m08:18:11.278564 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+could not translate host name "postgres_container" to address: Name or service not known
+
+[0m08:18:12.289035 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m08:18:12.290193 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m08:18:12.291234 [debug] [MainThread]: On debug: No close available on handle
+[0m08:18:12.292227 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m08:18:12.293572 [info ] [MainThread]: [31m1 check failed:[0m
+[0m08:18:12.294931 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\ascom\Desktop\data engineering\weather project\dbt_project.yml> not found
+
+[0m08:18:12.296693 [debug] [MainThread]: Command `dbt debug` failed at 08:18:12.296318 after 2.33 seconds
+[0m08:18:12.297696 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m08:18:12.298745 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E24129AB10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E2400AEB10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E241236140>]}
+[0m08:18:12.300048 [debug] [MainThread]: Flushing usage events
+[0m08:18:28.191391 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A5FEFFDE80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A5FEED91D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A581A90190>]}
+
+
+============================== 08:18:28.196086 | a7085289-901d-41ff-8fb4-4acef7f422f8 ==============================
+[0m08:18:28.196086 [info ] [MainThread]: Running with dbt=1.6.0
+[0m08:18:28.196794 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'debug': 'False', 'log_path': 'logs', 'write_json': 'True', 'log_cache_events': 'False', 'invocation_command': 'dbt run', 'printer_width': '80', 'version_check': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error': 'None', 'use_experimental_parser': 'False', 'use_colors': 'True', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'partial_parse': 'True', 'profiles_dir': 'C:\\Users\\ascom\\Desktop\\data engineering\\weather project', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'fail_fast': 'False', 'no_print': 'None'}
+[0m08:18:28.197342 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\ascom\Desktop\data engineering\weather project\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m08:18:28.198005 [debug] [MainThread]: Command `dbt run` failed at 08:18:28.197871 after 0.09 seconds
+[0m08:18:28.198376 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A581A9C640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A5819DA570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A581A34F30>]}
+[0m08:18:28.198817 [debug] [MainThread]: Flushing usage events
+[0m08:18:42.990534 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001712982DE80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000171297091D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001712C1D4190>]}
+
+
+============================== 08:18:42.995853 | 0b38ae9b-bff2-4cb3-856f-bedd44f6984a ==============================
+[0m08:18:42.995853 [info ] [MainThread]: Running with dbt=1.6.0
+[0m08:18:42.996697 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'cache_selected_only': 'False', 'log_path': 'logs', 'invocation_command': 'dbt test', 'log_cache_events': 'False', 'write_json': 'True', 'printer_width': '80', 'version_check': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error': 'None', 'use_experimental_parser': 'False', 'use_colors': 'True', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'profiles_dir': 'C:\\Users\\ascom\\Desktop\\data engineering\\weather project', 'log_format': 'default', 'indirect_selection': 'eager', 'debug': 'False', 'fail_fast': 'False', 'no_print': 'None'}
+[0m08:18:42.997250 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\ascom\Desktop\data engineering\weather project\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m08:18:42.997937 [debug] [MainThread]: Command `dbt test` failed at 08:18:42.997793 after 0.09 seconds
+[0m08:18:42.998330 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001712C1DC640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001712C11A570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001712C170F30>]}
+[0m08:18:42.998803 [debug] [MainThread]: Flushing usage events
+[0m18:28:35.082124 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C89FD39010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C8A266D590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C8A266DA90>]}
+
+
+============================== 18:28:35.092866 | 55bb3071-320f-43de-bfff-0bec2bb02214 ==============================
+[0m18:28:35.092866 [info ] [MainThread]: Running with dbt=1.6.0
+[0m18:28:35.093795 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'debug': 'False', 'log_path': 'logs', 'write_json': 'True', 'log_cache_events': 'False', 'invocation_command': 'dbt debug', 'version_check': 'True', 'printer_width': '80', 'static_parser': 'True', 'target_path': 'None', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'partial_parse': 'True', 'profiles_dir': 'C:\\Users\\ascom\\Desktop\\data engineering\\weather project', 'use_experimental_parser': 'False', 'log_format': 'default', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'fail_fast': 'False', 'no_print': 'None'}
+[0m18:28:35.094393 [info ] [MainThread]: dbt version: 1.6.0
+[0m18:28:35.094925 [info ] [MainThread]: python version: 3.13.5
+[0m18:28:35.095489 [info ] [MainThread]: python path: C:\Users\ascom\AppData\Local\Programs\Python\Python313\python.exe
+[0m18:28:35.096015 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m18:28:35.256385 [info ] [MainThread]: Using profiles dir at C:\Users\ascom\Desktop\data engineering\weather project
+[0m18:28:35.256994 [info ] [MainThread]: Using profiles.yml file at C:\Users\ascom\Desktop\data engineering\weather project\profiles.yml
+[0m18:28:35.257545 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\ascom\Desktop\data engineering\weather project\dbt_project.yml
+[0m18:28:35.258786 [info ] [MainThread]: adapter type: postgres
+[0m18:28:35.259285 [info ] [MainThread]: adapter version: 1.6.0
+[0m18:28:35.259822 [info ] [MainThread]: Configuration:
+[0m18:28:35.260315 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m18:28:35.260771 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m18:28:35.261367 [info ] [MainThread]: Required dependencies:
+[0m18:28:35.261958 [debug] [MainThread]: Executing "git --help"
+[0m18:28:35.328376 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m18:28:35.329599 [debug] [MainThread]: STDERR: "b''"
+[0m18:28:35.330723 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m18:28:35.331562 [info ] [MainThread]: Connection:
+[0m18:28:35.332227 [info ] [MainThread]:   host: postgres_container
+[0m18:28:35.332814 [info ] [MainThread]:   port: 5432
+[0m18:28:35.333375 [info ] [MainThread]:   user: airflow
+[0m18:28:35.333907 [info ] [MainThread]:   database: airflow_db
+[0m18:28:35.334486 [info ] [MainThread]:   schema: bronze
+[0m18:28:35.335049 [info ] [MainThread]:   connect_timeout: 10
+[0m18:28:35.335780 [info ] [MainThread]:   role: None
+[0m18:28:35.336495 [info ] [MainThread]:   search_path: None
+[0m18:28:35.337257 [info ] [MainThread]:   keepalives_idle: 0
+[0m18:28:35.338084 [info ] [MainThread]:   sslmode: None
+[0m18:28:35.338884 [info ] [MainThread]:   sslcert: None
+[0m18:28:35.339514 [info ] [MainThread]:   sslkey: None
+[0m18:28:35.340085 [info ] [MainThread]:   sslrootcert: None
+[0m18:28:35.340656 [info ] [MainThread]:   application_name: dbt
+[0m18:28:35.341190 [info ] [MainThread]:   retries: 1
+[0m18:28:35.341884 [info ] [MainThread]: Registered adapter: postgres=1.6.0
+[0m18:28:35.342813 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m18:28:35.343712 [debug] [MainThread]: Using postgres connection "debug"
+[0m18:28:35.344564 [debug] [MainThread]: On debug: select 1 as id
+[0m18:28:35.345330 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:28:36.359037 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+could not translate host name "postgres_container" to address: Name or service not known
+
+[0m18:28:37.379794 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m18:28:37.380653 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m18:28:37.381395 [debug] [MainThread]: On debug: No close available on handle
+[0m18:28:37.382129 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m18:28:37.383164 [info ] [MainThread]: [31m1 check failed:[0m
+[0m18:28:37.384122 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\ascom\Desktop\data engineering\weather project\dbt_project.yml> not found
+
+[0m18:28:37.385376 [debug] [MainThread]: Command `dbt debug` failed at 18:28:37.385103 after 2.39 seconds
+[0m18:28:37.386129 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m18:28:37.386655 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C8A2744510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C8A25F7D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C8A25C7680>]}
+[0m18:28:37.387280 [debug] [MainThread]: Flushing usage events
